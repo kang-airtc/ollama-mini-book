@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="640" pageHeight="560" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="cli_layer" value="客户端" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="560" height="110" as="geometry"/>
+    </mxCell>
+    <mxCell id="c1" value="CLI 工具" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="cli_layer">
+      <mxGeometry x="40" y="50" width="140" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="c2" value="Python 客户端" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="cli_layer">
+      <mxGeometry x="210" y="50" width="140" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="c3" value="Node 客户端" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="cli_layer">
+      <mxGeometry x="380" y="50" width="140" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="http" value="HTTP 接口  127.0.0.1:11434" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="160" y="190" width="320" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="srv_layer" value="Ollama 服务进程" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="290" width="560" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1" value="请求路由" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="srv_layer">
+      <mxGeometry x="40" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2" value="模型管理" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="srv_layer">
+      <mxGeometry x="210" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3" value="推理引擎" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="srv_layer">
+      <mxGeometry x="380" y="50" width="140" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="disk" value="本地模型仓库（~/.ollama）" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="160" y="450" width="320" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="HTTP 请求" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="cli_layer" target="http">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="http" target="srv_layer">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="加载权重" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="srv_layer" target="disk">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

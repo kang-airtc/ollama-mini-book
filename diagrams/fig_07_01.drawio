@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="780" pageHeight="600" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="user" value="用户" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="120" y="40" width="540" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="llm" value="模型 LLM（语言决策）" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="120" y="160" width="540" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="client" value="MCP 客户端（协议转换）" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="120" y="280" width="540" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="server" value="MCP Server（工具路由）" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="120" y="400" width="540" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="tool" value="工具 Tool（数据访问）" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="120" y="520" width="540" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="① 提问" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.25;exitY=1;entryX=0.25;entryY=0;fontSize=11;fontColor=#333333;verticalAlign=middle;align=right;" edge="1" parent="1" source="user" target="llm">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e8" value="⑧ 最终回答" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#999999;exitX=0.75;exitY=0;entryX=0.75;entryY=1;fontSize=11;fontColor=#333333;verticalAlign=middle;align=left;dashed=1;" edge="1" parent="1" source="llm" target="user">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="② 工具调用意图" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.25;exitY=1;entryX=0.25;entryY=0;fontSize=11;fontColor=#333333;verticalAlign=middle;align=right;" edge="1" parent="1" source="llm" target="client">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" value="⑦ 工具结果" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#999999;exitX=0.75;exitY=0;entryX=0.75;entryY=1;fontSize=11;fontColor=#333333;verticalAlign=middle;align=left;dashed=1;" edge="1" parent="1" source="client" target="llm">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="③ 协议消息" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.25;exitY=1;entryX=0.25;entryY=0;fontSize=11;fontColor=#333333;verticalAlign=middle;align=right;" edge="1" parent="1" source="client" target="server">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" value="⑥ 协议响应" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#999999;exitX=0.75;exitY=0;entryX=0.75;entryY=1;fontSize=11;fontColor=#333333;verticalAlign=middle;align=left;dashed=1;" edge="1" parent="1" source="server" target="client">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" value="④ 执行函数" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.25;exitY=1;entryX=0.25;entryY=0;fontSize=11;fontColor=#333333;verticalAlign=middle;align=right;" edge="1" parent="1" source="server" target="tool">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" value="⑤ 返回结果" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#999999;exitX=0.75;exitY=0;entryX=0.75;entryY=1;fontSize=11;fontColor=#333333;verticalAlign=middle;align=left;dashed=1;" edge="1" parent="1" source="tool" target="server">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

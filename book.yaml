@@ -1,0 +1,53 @@
+title: Agent Ollama 实战小册
+author: 光谷老亢
+publisher: 待定
+type: handbook
+template: tsinghua
+created: '2026-05-16'
+source_code: https://github.com/kang-airtc/agent-ollama-book
+description: |
+  以"电商工单智能检索助手"为贯穿案例，从本地 Ollama 起步，
+  逐步构建 Embedding + ChromaDB 向量检索、FastMCP Agent 工具、
+  FastAPI SSE 流式后端、Next.js 流式聊天前端，
+  一册跑通本地大模型驱动的 RAG 全栈应用。
+chapters:
+- id: '01'
+  title: Ollama 本地大模型快速上手
+  status: draft
+  file: chapters/chapter_01.md
+- id: '02'
+  title: Ollama HTTP API 与流式响应
+  status: draft
+  file: chapters/chapter_02.md
+- id: '03'
+  title: 文本切片：为向量化准备数据
+  status: draft
+  file: chapters/chapter_03.md
+- id: '04'
+  title: Embedding 向量化原理与实战
+  status: draft
+  file: chapters/chapter_04.md
+- id: '05'
+  title: ChromaDB 向量数据库入门
+  status: draft
+  file: chapters/chapter_05.md
+- id: '06'
+  title: 构建工单知识库
+  status: draft
+  file: chapters/chapter_06.md
+- id: '07'
+  title: FastMCP 把检索封装成 Agent 工具
+  status: draft
+  file: chapters/chapter_07.md
+- id: '08'
+  title: FastAPI 与 SSE 流式 RAG 后端
+  status: draft
+  file: chapters/chapter_08.md
+- id: '09'
+  title: Next.js 前端流式聊天界面
+  status: draft
+  file: chapters/chapter_09.md
+- id: '10'
+  title: 全栈联调与排错
+  status: draft
+  file: chapters/chapter_10.md

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="640" pageHeight="640" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="n1" value="原始文档" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="220" y="40" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="n2" value="文本切片" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="220" y="140" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="n3" value="嵌入向量化" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="220" y="240" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="n4" value="向量数据库" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="220" y="340" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="n5" value="相似度检索" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="220" y="440" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="n6" value="LLM 生成" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=13;" vertex="1" parent="1">
+      <mxGeometry x="220" y="540" width="200" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="hint" value="粒度过大：检索不精&#10;粒度过小：语义不全" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="460" y="135" width="160" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n1" target="n2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n2" target="n3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n3" target="n4">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n4" target="n5">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="n5" target="n6">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeWidth=1;strokeColor=#999999;dashed=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="hint" target="n2">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

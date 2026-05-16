@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="700" pageHeight="560" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="col" value="集合 Collection（name = &quot;test_docs&quot;）" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="560" height="480" as="geometry"/>
+    </mxCell>
+    <mxCell id="doc1" value="文档 doc1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="col">
+      <mxGeometry x="30" y="50" width="240" height="380" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1_content" value="内容 document&#xa;&quot;苹果是一种水果...&quot;" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc1">
+      <mxGeometry x="20" y="50" width="200" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1_vector" value="向量 embedding&#xa;[0.21, -0.43, 0.18, ...]" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc1">
+      <mxGeometry x="20" y="160" width="200" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="d1_meta" value="元数据 metadata&#xa;{category: &quot;水果&quot;}" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc1">
+      <mxGeometry x="20" y="270" width="200" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="doc2" value="文档 doc2" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;align=center;" vertex="1" parent="col">
+      <mxGeometry x="290" y="50" width="240" height="380" as="geometry"/>
+    </mxCell>
+    <mxCell id="d2_content" value="内容 document&#xa;&quot;Python 是编程语言...&quot;" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc2">
+      <mxGeometry x="20" y="50" width="200" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="d2_vector" value="向量 embedding&#xa;[-0.12, 0.31, 0.42, ...]" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc2">
+      <mxGeometry x="20" y="160" width="200" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="d2_meta" value="元数据 metadata&#xa;{category: &quot;编程&quot;}" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="doc2">
+      <mxGeometry x="20" y="270" width="200" height="80" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

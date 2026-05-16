@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="640" pageHeight="520" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="title" value="单次流式响应（NDJSON）" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="160" y="30" width="320" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line1" value="{ &quot;message&quot;: { &quot;content&quot;: &quot;你&quot; }, &quot;done&quot;: false }" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=11;align=left;" vertex="1" parent="1">
+      <mxGeometry x="40" y="110" width="560" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line2" value="{ &quot;message&quot;: { &quot;content&quot;: &quot;好&quot; }, &quot;done&quot;: false }" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=11;align=left;" vertex="1" parent="1">
+      <mxGeometry x="40" y="160" width="560" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="line3" value="{ &quot;message&quot;: { &quot;content&quot;: &quot;，&quot; }, &quot;done&quot;: false }" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=11;align=left;" vertex="1" parent="1">
+      <mxGeometry x="40" y="210" width="560" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="dots" value="……（每行换行符分隔）……" style="rounded=1;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#CCCCCC;fontColor=#666666;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="40" y="260" width="560" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="lineN" value="{ &quot;message&quot;: { &quot;content&quot;: &quot;&quot; }, &quot;done&quot;: true }" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=11;align=left;" vertex="1" parent="1">
+      <mxGeometry x="40" y="310" width="560" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="hint1" value="content：本片增量文本" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="60" y="400" width="240" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="hint2" value="done=true：流结束标志" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="340" y="400" width="240" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="title" target="line1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

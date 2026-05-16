@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="720" pageHeight="500" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="txt_layer" value="原始文本" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="30" width="220" height="280" as="geometry"/>
+    </mxCell>
+    <mxCell id="t1" value="苹果是一种水果" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="txt_layer">
+      <mxGeometry x="20" y="50" width="180" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="t2" value="香蕉富含钾元素" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="txt_layer">
+      <mxGeometry x="20" y="120" width="180" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="t3" value="Python 是编程语言" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="txt_layer">
+      <mxGeometry x="20" y="190" width="180" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="model" value="嵌入模型&#10;nomic-embed-text" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="300" y="160" width="160" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="space" value="768 维向量空间" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="500" y="30" width="200" height="280" as="geometry"/>
+    </mxCell>
+    <mxCell id="v1" value="● 苹果" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="space">
+      <mxGeometry x="30" y="60" width="80" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="v2" value="● 香蕉" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="space">
+      <mxGeometry x="80" y="100" width="80" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="v3" value="● Python" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=12;" vertex="1" parent="space">
+      <mxGeometry x="50" y="200" width="100" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="note" value="语义近 → 距离近&#10;语义远 → 距离远" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="220" y="360" width="320" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="向量化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="txt_layer" target="model">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="映射" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="model" target="space">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

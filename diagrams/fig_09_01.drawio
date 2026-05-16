@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="760" pageHeight="540" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="left" value="SSE 事件（后端推送）" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="40" width="280" height="460" as="geometry"/>
+    </mxCell>
+    <mxCell id="evt_status" value="status&#xa;阶段进度提示" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="left">
+      <mxGeometry x="20" y="50" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="evt_retrieved" value="retrieved_data&#xa;检索到的工单 JSON" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="left">
+      <mxGeometry x="20" y="150" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="evt_llm" value="llm_chunk&#xa;模型回答增量片段" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="left">
+      <mxGeometry x="20" y="250" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="evt_error" value="error / onerror&#xa;错误信息或连接异常" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="left">
+      <mxGeometry x="20" y="350" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="right" value="前端界面区域（按事件分流渲染）" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=14;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="440" y="40" width="280" height="460" as="geometry"/>
+    </mxCell>
+    <mxCell id="ui_status" value="状态条&#xa;加载文案与进度" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="right">
+      <mxGeometry x="20" y="50" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="ui_refs" value="参考区&#xa;工单卡片列表" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="right">
+      <mxGeometry x="20" y="150" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="ui_msg" value="消息列表&#xa;助手回答 + 流式光标" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="right">
+      <mxGeometry x="20" y="250" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="ui_err" value="错误提示&#xa;弹窗或顶部横幅" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="right">
+      <mxGeometry x="20" y="350" width="240" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="addEventListener(&quot;status&quot;)" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="evt_status" target="ui_status">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="addEventListener(&quot;retrieved_data&quot;)" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="evt_retrieved" target="ui_refs">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="addEventListener(&quot;llm_chunk&quot;)" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="evt_llm" target="ui_msg">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" value="onerror" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="evt_error" target="ui_err">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

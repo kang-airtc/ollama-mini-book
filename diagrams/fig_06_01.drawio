@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="700" pageHeight="640" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="user" value="用户输入&#xa;自然语言查询 + 业务约束" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="270" y="40" width="160" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="meta_ch" value="元数据通道&#xa;where 硬性约束过滤" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="80" y="180" width="220" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="vec_ch" value="向量通道&#xa;查询文本 → 嵌入向量" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="400" y="180" width="220" height="70" as="geometry"/>
+    </mxCell>
+    <mxCell id="candidate" value="候选工单子集（缩小搜索空间）" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="80" y="300" width="220" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="qvec" value="查询向量 q" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="400" y="300" width="220" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="rank" value="向量相似度排序&#xa;在候选集内做 HNSW 检索（距离升序）" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="200" y="430" width="300" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="topn" value="Top N 工单（最终结果）" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="270" y="560" width="160" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="user" target="meta_ch">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="user" target="vec_ch">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="meta_ch" target="candidate">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="vec_ch" target="qvec">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.25;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="candidate" target="rank">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.75;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="qvec" target="rank">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="rank" target="topn">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

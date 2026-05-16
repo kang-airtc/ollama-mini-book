@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel pageWidth="820" pageHeight="740" grid="1" gridSize="10">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="ollama" value="① Ollama（port 11434）　本地大模型服务" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="140" y="40" width="540" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="mcp" value="② MCP Server（port 8001）　向量检索 FastMCP 工具" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="140" y="200" width="540" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="fastapi" value="③ FastAPI 后端（port 8000）　RAG 调度 + SSE 推流" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="140" y="360" width="540" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="nextjs" value="④ Next.js 前端（port 3000）　EventSource 聊天界面" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="140" y="520" width="540" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="user" value="浏览器用户" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#333333;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="330" y="660" width="160" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="依赖 + 启动顺序" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="ollama" target="mcp">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="410" y="160"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e2" value="依赖（跨级）" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#999999;exitX=1;exitY=0.5;entryX=1;entryY=0.5;fontSize=11;fontColor=#333333;dashed=1;" edge="1" parent="1" source="ollama" target="fastapi">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="730" y="400"/>
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e3" value="依赖 + 启动顺序" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="mcp" target="fastapi">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" value="依赖 + 启动顺序" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="fastapi" target="nextjs">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" value="用户访问" style="endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=11;fontColor=#333333;" edge="1" parent="1" source="nextjs" target="user">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
