@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxGraphModel pageWidth="700" pageHeight="560" grid="1" gridSize="10">
+<mxGraphModel pageWidth="700" pageHeight="620" grid="1" gridSize="10">
   <root>
     <mxCell id="0"/>
     <mxCell id="1" parent="0"/>
     <mxCell id="t_build" value="构建阶段（一次性）" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="40" y="30" width="620" height="200" as="geometry"/>
+      <mxGeometry x="40" y="30" width="620" height="180" as="geometry"/>
     </mxCell>
     <mxCell id="b1" value="文档块" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="t_build">
       <mxGeometry x="40" y="80" width="120" height="50" as="geometry"/>
@@ -15,8 +15,11 @@
     <mxCell id="b3" value="向量数据库" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=12;" vertex="1" parent="t_build">
       <mxGeometry x="400" y="80" width="160" height="50" as="geometry"/>
     </mxCell>
+    <mxCell id="note" value="同一嵌入模型 / 同一维度 / 同一向量空间" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="170" y="260" width="360" height="40" as="geometry"/>
+    </mxCell>
     <mxCell id="t_query" value="查询阶段（每次提问）" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#333333;fontSize=13;fontStyle=1;" vertex="1" parent="1">
-      <mxGeometry x="40" y="280" width="620" height="240" as="geometry"/>
+      <mxGeometry x="40" y="350" width="620" height="240" as="geometry"/>
     </mxCell>
     <mxCell id="q1" value="用户问题" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="t_query">
       <mxGeometry x="40" y="80" width="120" height="50" as="geometry"/>
@@ -28,15 +31,18 @@
       <mxGeometry x="400" y="80" width="160" height="50" as="geometry"/>
     </mxCell>
     <mxCell id="q4" value="Top-K 文档块" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="t_query">
-      <mxGeometry x="400" y="160" width="160" height="50" as="geometry"/>
-    </mxCell>
-    <mxCell id="note" value="同一嵌入模型 / 同一维度 / 同一向量空间" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
-      <mxGeometry x="160" y="240" width="380" height="30" as="geometry"/>
+      <mxGeometry x="400" y="170" width="160" height="50" as="geometry"/>
     </mxCell>
     <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="t_build" source="b1" target="b2">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <mxCell id="e2" value="写入向量" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="t_build" source="b2" target="b3">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_link" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="t_build" target="note">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e_link2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="note" target="t_query">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="t_query" source="q1" target="q2">

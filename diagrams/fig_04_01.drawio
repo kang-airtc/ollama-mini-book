@@ -25,18 +25,21 @@
       <mxGeometry x="30" y="60" width="80" height="40" as="geometry"/>
     </mxCell>
     <mxCell id="v2" value="● 香蕉" style="rounded=1;whiteSpace=wrap;fillColor=#E8F4FD;strokeColor=#4A4A4A;fontColor=#333333;fontSize=12;" vertex="1" parent="space">
-      <mxGeometry x="80" y="100" width="80" height="40" as="geometry"/>
+      <mxGeometry x="80" y="120" width="80" height="40" as="geometry"/>
     </mxCell>
     <mxCell id="v3" value="● Python" style="rounded=1;whiteSpace=wrap;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#333333;fontSize=12;" vertex="1" parent="space">
-      <mxGeometry x="50" y="200" width="100" height="40" as="geometry"/>
+      <mxGeometry x="50" y="210" width="100" height="40" as="geometry"/>
     </mxCell>
-    <mxCell id="note" value="语义近 → 距离近&#10;语义远 → 距离远" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=11;" vertex="1" parent="1">
-      <mxGeometry x="220" y="360" width="320" height="60" as="geometry"/>
+    <mxCell id="note" value="语义近 → 向量距离近   /   语义远 → 向量距离远" style="rounded=1;whiteSpace=wrap;fillColor=#D5F5E3;strokeColor=#82b366;fontColor=#333333;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="160" y="380" width="420" height="50" as="geometry"/>
     </mxCell>
     <mxCell id="e1" value="向量化" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="txt_layer" target="model">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
     <mxCell id="e2" value="映射" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=block;endFill=1;strokeWidth=2;strokeColor=#666666;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="model" target="space">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeWidth=1;strokeColor=#82b366;dashed=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="model" target="note">
       <mxGeometry relative="1" as="geometry"/>
     </mxCell>
   </root>
