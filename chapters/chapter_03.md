@@ -142,4 +142,4 @@ def split_text_with_overlap(text, separator="\n\n", overlap=50):
 
 切好的文本块还只是字符串，无法直接被相似度检索使用。下一章笔者将带读者把每个文本块送进 Ollama 的嵌入模型，得到 768 维向量，并理解余弦相似度如何把语义“接近”转换为可计算的数字。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

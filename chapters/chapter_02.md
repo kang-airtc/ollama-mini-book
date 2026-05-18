@@ -156,4 +156,4 @@ async def stream_chat(prompt: str, model: str = "llama3.2:latest"):
 
 下一章笔者将转向数据侧：要让本地 LLM 能基于私有知识回答问题，先要把原始文本切成大小适中的块。文本切片是检索增强生成链路上看似不起眼但至关重要的一环，做得好与不好直接决定后续向量检索的效果。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

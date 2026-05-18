@@ -278,4 +278,4 @@ except Exception as e:
 
 接下来的工作是让前端用户能用上这套能力。下一章笔者将基于 Next.js 实现一个流式聊天界面，把 SSE 事件按类型渲染为状态提示、参考来源与回答内容。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

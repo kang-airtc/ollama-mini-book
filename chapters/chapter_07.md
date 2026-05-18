@@ -218,4 +218,4 @@ return json.dumps({"error": f"搜索失败: {str(e)}"}, ensure_ascii=False)
 
 接下来的工作是把 MCP 客户端嵌入到完整后端服务里，给前端用户提供一个体验流畅的流式问答接口。下一章笔者将搭建 FastAPI 服务，串起向量检索、RAG 提示工程、Ollama 流式生成、SSE 推流四个环节，把链路推进到面向用户的最后一公里。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

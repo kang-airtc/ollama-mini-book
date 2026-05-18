@@ -227,4 +227,4 @@ similarity_score 使用 1 减距离的简单变换，对归一化向量来说这
 
 到此为止，知识库已经具备完整能力。但是 search_tickets_semantic 当下还是一个普通 Python 函数，只能被同进程的代码调用，无法被 Agent 跨进程调用。下一章笔者将把它升级为一个 MCP Tool，让外部的 Agent 或后端服务能通过标准协议调用这个检索能力。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

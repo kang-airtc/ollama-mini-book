@@ -36,7 +36,7 @@
 
 ## 配套源码
 
-- **本书源码**：[https://github.com/kang-airtc/agent-ollama-book](https://github.com/kang-airtc/agent-ollama-book)
+- **本书源码**：[https://github.com/kang-airtc/ollama-mini-book](https://github.com/kang-airtc/ollama-mini-book)
 - Demo 代码在 `agent-ollama-demo/` 目录，按章节组织，每章独立可运行
 
 ## 环境要求

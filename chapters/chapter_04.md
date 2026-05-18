@@ -156,4 +156,4 @@ def cosine_similarity(vec1, vec2):
 
 到这里为止，读者已经能把任意一组文本变成向量，并对两两之间的相似度做出量化判断。接下来需要一个专门为向量设计的存储引擎，让“近似最近邻”检索能在毫秒级完成。下一章笔者将把所有向量交给 ChromaDB 管理，搭建出 RAG 知识库的存储底座。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

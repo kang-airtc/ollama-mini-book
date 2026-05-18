@@ -277,4 +277,4 @@ useEffect(() => {
 
 至此整条 RAG 链路在代码层面已经完整。但要把三个独立服务（MCP Server、FastAPI、Next.js）协同跑起来还有一些工程细节：启动顺序、端口冲突、模型未拉取、依赖缺失等。下一章笔者将系统整理全栈联调与排错经验，让读者在拿到代码后能顺畅地把整个项目跑通。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book

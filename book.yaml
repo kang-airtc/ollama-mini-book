@@ -4,7 +4,7 @@ publisher: 待定
 type: handbook
 template: tsinghua
 created: '2026-05-16'
-source_code: https://github.com/kang-airtc/agent-ollama-book
+source_code: https://github.com/kang-airtc/ollama-mini-book
 description: |
   以"电商工单智能检索助手"为贯穿案例，从本地 Ollama 起步，
   逐步构建 Embedding + ChromaDB 向量检索、FastMCP Agent 工具、

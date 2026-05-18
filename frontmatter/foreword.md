@@ -6,6 +6,6 @@
 
 全书内容如下：第 1、2 章带读者把 Ollama 装好、把流式调用调通；第 3、4 章讲解文本切片与 Embedding 向量化；第 5、6 章引入 ChromaDB 并构建工单知识库；第 7 章用 FastMCP 把检索封装为 Agent 工具；第 8、9 章实现 FastAPI 流式后端与 Next.js 聊天前端；第 10 章整理全栈联调与排错的实战经验。
 
-本书适合熟悉 Python、对生成式 AI 与 RAG 感兴趣的工程师阅读。建议读者跟着配套源码一起动手，每章读完即可跑通对应模块，最后串成完整应用。配套源码地址：https://github.com/kang-airtc/agent-ollama-book。
+本书适合熟悉 Python、对生成式 AI 与 RAG 感兴趣的工程师阅读。建议读者跟着配套源码一起动手，每章读完即可跑通对应模块，最后串成完整应用。配套源码地址：https://github.com/kang-airtc/ollama-mini-book。
 
 作者: 光谷老亢

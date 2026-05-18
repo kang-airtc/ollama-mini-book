@@ -204,4 +204,4 @@ collection = client.get_or_create_collection(
 
 到目前为止，知识库的所有零件都已就位：文本被切片、向量化、存入数据库，可按问题做相似度检索。下一章笔者将把这些零件组装起来，搭建本书的核心案例：一个用工单数据构建的语义检索知识库。
 
-本章配套源码：https://github.com/kang-airtc/agent-ollama-book
+本章配套源码：https://github.com/kang-airtc/ollama-mini-book
