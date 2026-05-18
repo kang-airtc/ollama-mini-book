@@ -67,7 +67,3 @@ python main.py
 ```
 
 全栈联调步骤详见第10章。
-
-## License
-
-MIT © 2026 光谷老亢
